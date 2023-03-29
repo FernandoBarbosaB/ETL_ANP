@@ -155,7 +155,8 @@ Para implantar o Airflow em um container Docker, utilizou-se um arquivo YAML for
 
 Referente ao processo de ETL sendo orquestrado pelo Apache Airflow, o desenvolvimento do código foi semelhante, sendo necessário alterar algumas funções para adequar às necessidades de processamento de dados no Airflow e também ao envio das informações para um banco de dados. Neste caso, foi utilizado o banco de dados PostgreSQL para armazenar os dados do dataframe stage e final.
 
-(imagem pipeline airflow)
+![pipeline_air](https://user-images.githubusercontent.com/116772002/228634072-c1f45478-092f-4771-878c-171e699c9fe7.jpg)
+
 
 
 
@@ -171,7 +172,7 @@ Referente ao processo de ETL sendo orquestrado pelo Apache Airflow, o desenvolvi
 * [Python](https://www.python.org/)
 * [Microsoft SQL Server Management Studio](https://www.microsoft.com/pt-br/sql-server/sql-server-downloads) - Banco de dados SQL Server
 * [Apache Airflow](https://airflow.apache.org/) - Orquestrador de Fluxo de Trabalho (Pipelines)
-* [Docker](https://www.docker.com/products/docker-desktop/) - 
+* [Docker](https://www.docker.com/products/docker-desktop/) - Ferramenta para criação, execução e gerenciamento de contêineres 
 * [PostgreSQL](https://www.postgresql.org/) - Banco de dados PosgreSQL
 
 
