@@ -128,6 +128,7 @@ Shape e Tabela Final (diesel)
 
 Os dataframes finais foram enviados para o schema Final no banco de dados SQL Server utilizando uma função para conectar ao banco de dados.
 
+Após a inserção dos dados no banco de dados, foram realizadas consultas de validação para obter o somatório dos valores correspondentes à tabela dinâmica. Essas consultas foram executadas com o objetivo de verificar se os dados inseridos foram armazenados corretamente e se os cálculos estão sendo feitos de forma precisa. Essa etapa é fundamental para garantir a integridade dos dados e evitar erros nos resultados obtidos.
 
 ## ETL - Airflow 
 
@@ -157,6 +158,9 @@ Referente ao processo de ETL sendo orquestrado pelo Apache Airflow, o desenvolvi
 
 ![pipeline_air](https://user-images.githubusercontent.com/116772002/228634072-c1f45478-092f-4771-878c-171e699c9fe7.jpg)
 
+Amostra de Dados inseridos no PostgreSQL
+
+![stage_postgres](https://user-images.githubusercontent.com/116772002/228637651-0c57dd80-cfc7-4296-a4a6-3b275b54489c.jpg)
 
 
 
