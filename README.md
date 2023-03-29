@@ -96,14 +96,14 @@ Após a verificação do arquivo com os dados brutos, foi realizada a leitura de
 
 O dataframe resultante contém 4968 linhas e 18 colunas para as informações sobre Petróleo e um dataframe com 1350 linhas e 17 colunas para as informações sobre Óleo Diesel. Os dataframes foram enviados para o schema Stage no banco de dados SQL Server, utilizando uma função para conectar com o banco de dados por meio da biblioteca SQLAlchemy.
 
- - shape df stage
+Shape e Tabela Stage (petróleo)
 ![df_stage_pet_shape](https://user-images.githubusercontent.com/116772002/228604895-d7df8cdc-fbec-45aa-b860-1b15a1e00ea9.jpg)
-![df_stage_diesel_shape](https://user-images.githubusercontent.com/116772002/228604935-5cee69c0-db28-44a1-bed6-dc03a94dcd8d.jpg)
 
-
- - tabela stage 
- 
 ![stage_petroleo_sqlserver](https://user-images.githubusercontent.com/116772002/228605474-2206b514-5124-4038-99cb-7798c6059d29.jpg)
+
+Shape e Tabela Stage (diesel)
+
+![df_stage_diesel_shape](https://user-images.githubusercontent.com/116772002/228604935-5cee69c0-db28-44a1-bed6-dc03a94dcd8d.jpg)
 
 ![stage_diesel_sqlserver](https://user-images.githubusercontent.com/116772002/228605510-2110e1f2-3c0b-4983-ab93-7d2a6e69f586.jpg)
 
@@ -114,14 +114,15 @@ Em outro script Python, foi realizada a leitura desses dados brutos no schema St
 Realizando iterações utilizando o método iterrows, foi realizado o mapeamento dos valores referentes ao produto, ano e mês para inserir os dados no novo dataframe. 
 Chegando no dataframe final referente às informações sobre Petróleo com 59616 linhas e 6 colunas e um dataframe final com as informações sobre Óleo Diesel  16200 linhas e 6 colunas.
 
- - shape df final
-![df_final_pet_shape](https://user-images.githubusercontent.com/116772002/228605597-fa7a3b31-8de5-4d63-b5d4-ef825ca06f2e.jpg)
-![df_final_diesel_shape](https://user-images.githubusercontent.com/116772002/228605618-aaf011ed-b7dd-45e7-bcb7-b3a2a1a2fe08.jpg)
+Shape e Tabela Final (petróleo)
 
- - tabela final
- 
+![df_final_pet_shape](https://user-images.githubusercontent.com/116772002/228605597-fa7a3b31-8de5-4d63-b5d4-ef825ca06f2e.jpg)
  
 ![final_petroleo_sqlserver](https://user-images.githubusercontent.com/116772002/228605703-d9f0b6c3-dfae-4994-8c09-570b53f8243b.jpg)
+
+Shape e Tabela Final (diesel)
+
+![df_final_diesel_shape](https://user-images.githubusercontent.com/116772002/228605618-aaf011ed-b7dd-45e7-bcb7-b3a2a1a2fe08.jpg)
 
 ![final_diesel_sqlserver](https://user-images.githubusercontent.com/116772002/228605729-31df4ac6-98a6-41e8-8f53-63c948f99b81.jpg)
 
