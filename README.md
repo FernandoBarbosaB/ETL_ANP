@@ -19,14 +19,7 @@ Tabelas de Referência:
 ![tab_din_diesel](https://user-images.githubusercontent.com/116772002/228603894-d7aff146-8221-439d-bf01-2b83cfe8351c.jpg)
 
 
-# 🏭 Arquitetura
 
-- Arquitetura do Processo de ETL com Python
-![arquitetura_v1](https://user-images.githubusercontent.com/116772002/228604438-5e470910-6453-4e9f-b2af-4223bbe9beba.png)
-
-
- - Arquitetura utilizando Apache Airflow
-![Diagrama sem nome drawio (2)](https://user-images.githubusercontent.com/116772002/228604080-2fa7076b-1c60-4bd6-b869-4b5c545d8d81.png)
 
 # ⚙️ Extração dos Dados
 
@@ -90,13 +83,17 @@ Verificando as tabelas dinâmicas do arquivo xlsx disponibilizado pela ANP (Agê
 
 
 
-## ETL -> Python
+## ETL - Python
+
+- Arquitetura do Processo de ETL com Python
+![arquitetura_v1](https://user-images.githubusercontent.com/116772002/228604438-5e470910-6453-4e9f-b2af-4223bbe9beba.png)
 
 Após a verificação do arquivo com os dados brutos, foi realizada a leitura desses dados utilizando Python, onde foram lidos os dados brutos referentes às informações de vendas de Derivados Combustíveis de Petróleo e Óleo Diesel. Realizou-se uma análise exploratória dos arquivos, criou-se um dataframe e concatenou-se as informações relevantes sobre as vendas. 
 
 O dataframe resultante contém 4968 linhas e 18 colunas para as informações sobre Petróleo e um dataframe com 1350 linhas e 17 colunas para as informações sobre Óleo Diesel. Os dataframes foram enviados para o schema Stage no banco de dados SQL Server, utilizando uma função para conectar com o banco de dados por meio da biblioteca SQLAlchemy.
 
 Shape e Tabela Stage (petróleo)
+
 ![df_stage_pet_shape](https://user-images.githubusercontent.com/116772002/228604895-d7df8cdc-fbec-45aa-b860-1b15a1e00ea9.jpg)
 
 ![stage_petroleo_sqlserver](https://user-images.githubusercontent.com/116772002/228605474-2206b514-5124-4038-99cb-7798c6059d29.jpg)
@@ -133,6 +130,9 @@ Os dataframes finais foram enviados para o schema Final no banco de dados SQL Se
 
 
 ## ETL - Airflow 
+
+- Arquitetura do Processo de ETL com Python
+![arquitetura_v1](https://user-images.githubusercontent.com/116772002/228604438-5e470910-6453-4e9f-b2af-4223bbe9beba.png)
 
 Para implantar o Airflow em um container Docker, utilizou-se um arquivo YAML fornecido pela Apache Airflow que contém vários serviços essenciais para o funcionamento da ferramenta, tais como:
  - airflow-scheduler - responsável por monitorar todas as tarefas e DAGs e acionar as instâncias de tarefa assim que suas dependências são concluídas.
