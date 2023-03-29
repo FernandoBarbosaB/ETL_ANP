@@ -131,8 +131,8 @@ Os dataframes finais foram enviados para o schema Final no banco de dados SQL Se
 
 ## ETL - Airflow 
 
-- Arquitetura do Processo de ETL com Python
-![arquitetura_v1](https://user-images.githubusercontent.com/116772002/228604438-5e470910-6453-4e9f-b2af-4223bbe9beba.png)
+ - Arquitetura utilizando Apache Airflow
+![Diagrama sem nome drawio (2)](https://user-images.githubusercontent.com/116772002/228604080-2fa7076b-1c60-4bd6-b869-4b5c545d8d81.png)
 
 Para implantar o Airflow em um container Docker, utilizou-se um arquivo YAML fornecido pela Apache Airflow que contém vários serviços essenciais para o funcionamento da ferramenta, tais como:
  - airflow-scheduler - responsável por monitorar todas as tarefas e DAGs e acionar as instâncias de tarefa assim que suas dependências são concluídas.
