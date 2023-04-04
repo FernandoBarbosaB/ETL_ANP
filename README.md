@@ -133,7 +133,8 @@ Após a inserção dos dados no banco de dados, foram realizadas consultas de va
 ## ETL - Airflow 
 
  - Arquitetura utilizando Apache Airflow
-![Diagrama sem nome drawio (2)](https://user-images.githubusercontent.com/116772002/228604080-2fa7076b-1c60-4bd6-b869-4b5c545d8d81.png)
+![diagrama_v2](https://user-images.githubusercontent.com/116772002/229844507-c09ec924-d0af-49c4-9b7c-0457544c28aa.png)
+
 
 Para implantar o Airflow em um container Docker, utilizou-se um arquivo YAML fornecido pela Apache Airflow que contém vários serviços essenciais para o funcionamento da ferramenta, tais como:
  - airflow-scheduler - responsável por monitorar todas as tarefas e DAGs e acionar as instâncias de tarefa assim que suas dependências são concluídas.
@@ -153,17 +154,33 @@ Para implantar o Airflow em um container Docker, utilizou-se um arquivo YAML for
 ![docker](https://user-images.githubusercontent.com/116772002/228605785-191f3515-978f-4990-a1ce-bd23906ef955.jpg)
 
 
+O processo de ETL é orquestrado pelo Apache Airflow. Inicialmente, o Airflow realiza a leitura e o tratamento inicial dos dados, salvando-os como um arquivo Parquet no container "fernando-barbosa", que é uma conta de armazenamento na nuvem da Azure.
 
-Referente ao processo de ETL sendo orquestrado pelo Apache Airflow, o desenvolvimento do código foi semelhante, sendo necessário alterar algumas funções para adequar às necessidades de processamento de dados no Airflow e também ao envio das informações para um banco de dados. Neste caso, foi utilizado o banco de dados PostgreSQL para armazenar os dados do dataframe stage e final.
-
-![pipeline_air](https://user-images.githubusercontent.com/116772002/228634072-c1f45478-092f-4771-878c-171e699c9fe7.jpg)
-
-Amostra de Dados inseridos no PostgreSQL
-
-![stage_postgres](https://user-images.githubusercontent.com/116772002/228637651-0c57dd80-cfc7-4296-a4a6-3b275b54489c.jpg)
+Após a conclusão da etapa de leitura e salvamento dos arquivos de "petróleo" e "diesel", a próxima tarefa aciona o notebook Databricks para executar a leitura dos dados e aplicar todo o tratamento necessário para obter o dataframe final. Por fim, os dados são enviados para um banco de dados criado usando o recurso Azure SQL.
 
 
+![dag_airflow](https://user-images.githubusercontent.com/116772002/229844704-4cfa4e54-ea9e-412a-aa56-20333b1f3f8a.jpg)
 
+
+Duração de cada tarefa executada
+![gantt_airflow](https://user-images.githubusercontent.com/116772002/229845070-6e513f59-9542-4625-ac1b-53b8bffa9ddf.jpg)
+
+
+
+Dados inseridos no container fernando-barbosa
+![storage](https://user-images.githubusercontent.com/116772002/229845027-2b71cebc-67d9-46b7-81b6-5e389cf5ba44.jpg)
+
+
+
+Amostra de Dados inseridos no Azure SQL:
+
+
+- Petroleo
+![petroleo_bd](https://user-images.githubusercontent.com/116772002/229844775-9c64b049-9d3f-4a5f-bee4-a1ba2d4e9f92.jpg)
+
+
+- Diesel
+![diesel_bd](https://user-images.githubusercontent.com/116772002/229844887-7935ef6b-62bb-4e1f-8909-e684aad6f480.jpg)
 
 
 
@@ -177,7 +194,8 @@ Amostra de Dados inseridos no PostgreSQL
 * [Microsoft SQL Server Management Studio](https://www.microsoft.com/pt-br/sql-server/sql-server-downloads) - Banco de dados SQL Server
 * [Apache Airflow](https://airflow.apache.org/) - Orquestrador de Fluxo de Trabalho (Pipelines)
 * [Docker](https://www.docker.com/products/docker-desktop/) - Ferramenta para criação, execução e gerenciamento de contêineres 
-* [PostgreSQL](https://www.postgresql.org/) - Banco de dados PosgreSQL
+* [Azure SQL](https://azure.microsoft.com/pt-br/products/azure-sql/database) - Banco de dados SQL do Azure
+* [Blob](https://azure.microsoft.com/pt-br/pricing/details/storage/blobs/) - Armazenamento de Blobs do Azure
 
 
 # 🏃 Autor
