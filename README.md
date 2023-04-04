@@ -133,7 +133,8 @@ Após a inserção dos dados no banco de dados, foram realizadas consultas de va
 ## ETL - Airflow 
 
  - Arquitetura utilizando Apache Airflow
-![diagrama_v2](https://user-images.githubusercontent.com/116772002/229844507-c09ec924-d0af-49c4-9b7c-0457544c28aa.png)
+![arq_v2_airflow](https://user-images.githubusercontent.com/116772002/229849476-766843b0-5136-4d86-ba5f-7f95df04d868.png)
+
 
 
 Para implantar o Airflow em um container Docker, utilizou-se um arquivo YAML fornecido pela Apache Airflow que contém vários serviços essenciais para o funcionamento da ferramenta, tais como:
