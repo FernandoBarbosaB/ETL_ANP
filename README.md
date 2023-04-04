@@ -197,6 +197,7 @@ Amostra de Dados inseridos no Azure SQL:
 * [Docker](https://www.docker.com/products/docker-desktop/) - Ferramenta para criação, execução e gerenciamento de contêineres 
 * [Azure SQL](https://azure.microsoft.com/pt-br/products/azure-sql/database) - Banco de dados SQL do Azure
 * [Blob](https://azure.microsoft.com/pt-br/pricing/details/storage/blobs/) - Armazenamento de Blobs do Azure
+* [Databricks](https://azure.microsoft.com/pt-br/products/databricks) - Azure Databricks
 
 
 # 🏃 Autor
